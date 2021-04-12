@@ -1,0 +1,18 @@
+{
+  "name": "reconhece-safra",
+  "version": "1.0.0",
+  "description": "Reconhece Safra",
+  "main": "src/index.html",
+  "keywords": [
+    "javascript",
+    "firebase",
+    "jest"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "start": "firebase serve --only hosting"
+  },
+  "engines": {
+    "node": ">=10"
+  }
+}
