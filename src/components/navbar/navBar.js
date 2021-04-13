@@ -6,11 +6,10 @@ export const Navbar = () => {
 
   navbar.innerHTML = `
   <div class="navBar">
-  <div class="jss150">
-  <img class="jss151" src="/components/logos/img/logo.png" style="color:red" alt="logo">
-  
+  <div class="nav">
+    <img class="logoNav" src="/components/logos/img/logo.png" style="color:red" alt="logo">
   </div>
-  </div>
+</div>
   `;
 
 

@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body,
+main {
+  width: 100%;
+  height: 100%;
+  background-color: #fdfdfd;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.logoSafra {
+  padding: 15%;
+  width: 70%;
+  height: 70%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+legend {
+  color: white;
+}
+
+.register {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 330px;
+  height: 350px;
+}
+
+.register input,
+.registerLogin input {
+    padding: 7px;
+    margin-bottom: 5px;
+    margin-left: 10px; 
+    border-radius: 5px;
+}
