@@ -1,5 +1,7 @@
 import { Feed } from './pages/feed/feed.js';
 import { Login } from './pages/login/login.js';
+import { Register } from './pages/register/register.js';
+import { Recommendation } from './pages/recommendation/recommendation.js';
 import { onNavigate } from './utils/history.js';
 
 const routeRender = () => {
@@ -7,6 +9,8 @@ const routeRender = () => {
   const routes = {
     '/' : Feed,
     '/login': Login,
+    '/register': Register,
+    '/recommendation': Recommendation
 
   };
 
@@ -27,6 +31,18 @@ window.addEventListener('load', () => {
     .addEventListener('click', (e) => {
       e.preventDefault();
       onNavigate('/login')
+    });
+    document
+    .getElementById('register')
+    .addEventListener('click', (e) => {
+      e.preventDefault();
+      onNavigate('/register')
+    });
+    document
+    .getElementById('recommendation')
+    .addEventListener('click', (e) => {
+      e.preventDefault();
+      onNavigate('/recommendation')
     });
 
   routeRender();
