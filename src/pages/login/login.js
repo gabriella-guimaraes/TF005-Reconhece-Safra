@@ -16,7 +16,8 @@ rootElement.innerHTML = `
         <input type="submit" value="Entrar">
     </form>
     <span>Esqueceu a senha?</span>
-    <p>Não tem conta?<button id="btnCadastro">Cadastre-se</button></p>
+    <p>Não possui uma conta?<button id="btnCadastro">Cadastre-se</button></p>
+  </main>
 `;
 return rootElement;
 };
