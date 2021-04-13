@@ -1,0 +1,22 @@
+.navBar {
+    top: 0;
+    width: 100%;
+    display: flex;
+    padding: 7px 0;
+    flex-wrap: wrap;
+    border-bottom: 2px solid #c1d12d;
+    background-color: #ce5f18;
+}
+
+.jss150 { 
+    width: 100%;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+}
+
+.jss151 { 
+flex-grow: 1;
+max-width: 60px;
+}
