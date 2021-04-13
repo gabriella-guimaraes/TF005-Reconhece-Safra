@@ -25,11 +25,9 @@ export const Register = () => {
         </form>
     </fieldset> 
   </main>
-      `;
-  return rootElement;
-};
+  `;
 
-const signUpButton = rootElement.querySelector('#btn');
+  const signUpButton = rootElement.querySelector('#btn');
 
 signUpButton.addEventListener('click', (event) => {
   event.preventDefault();
@@ -40,3 +38,6 @@ signUpButton.addEventListener('click', (event) => {
   const role = rootElement.querySelector('#passwordSescond').value;
   createAccount(userName, email, password, confirmPassword, role);
 });
+
+  return rootElement;
+};
