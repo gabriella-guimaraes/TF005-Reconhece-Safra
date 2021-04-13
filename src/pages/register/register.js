@@ -33,9 +33,9 @@ signUpButton.addEventListener('click', (event) => {
   event.preventDefault();
   const userName = rootElement.querySelector('#name').value;
   const email = rootElement.querySelector('#email').value;
-  const password = rootElement.querySelector('#name').value;
-  const confirmPassword = rootElement.querySelector('#passwordFirst').value;
-  const role = rootElement.querySelector('#passwordSescond').value;
+  const password = rootElement.querySelector('#passwordFirst').value;
+  const confirmPassword = rootElement.querySelector('#passwordSescond').value;
+  const role = rootElement.querySelector('#select').value;
   createAccount(userName, email, password, confirmPassword, role);
 });
 
