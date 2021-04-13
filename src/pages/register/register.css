@@ -4,9 +4,7 @@
   padding: 0;
 }
 
-html,
-body,
-main {
+html, body, main {
   width: 100%;
   height: 100%;
   background-color: #00003c;
@@ -21,7 +19,7 @@ main {
 }
 
 .logoSafra {
-  padding: 15%;
+  padding: 12%;
   width: 70%;
   height: 70%;
 }
@@ -42,14 +40,36 @@ legend {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 330px;
-  height: 350px;
+  width: 450px;
+  height: 450px;
 }
 
-.register input,
-.registerLogin input {
-    padding: 7px;
-    margin-bottom: 5px;
-    margin-left: 10px; 
-    border-radius: 5px;
+.register input, .registerLogin input {
+  width: 80%;
+  padding: 11px;
+  margin-bottom: 7px;
+  margin-left: 10px;
+  border-radius: 9px;
+}
+
+.btn {
+  justify-content: center;
+  padding: 11px;
+  width: 85%;
+  font-weight: bold;
+  font-size: 17px;
+  border-radius: 9px;
+  background-color: #1E2044;
+  color: white;
+  margin-top: 50px;
+  border: 8px, white;
+}
+
+.select {
+  justify-content: center;
+  padding: 6px;
+  width: 85%;
+  height: 9%;
+  margin-left: 15px;
+  border-radius: 5px;
 }
