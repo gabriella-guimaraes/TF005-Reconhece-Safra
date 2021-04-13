@@ -7,7 +7,7 @@ rootElement.innerHTML = `
     <h2>Login</h2>
     <form action="">
       <div class="input-field">
-        <input type="text" name="email" id="email" placeholder="Insira seu email">
+        <input type="text" name="username" id="username" placeholder="Insira seu email">
         <div class="underline"></div>
       </div>
       <div class="input-field">
@@ -20,7 +20,7 @@ rootElement.innerHTML = `
     <p>Não tem conta?<button id="btnCadastro">Cadastre-se</button></p>
 `;
 
-const email = rootElement.querySelector('#email');
+const email = rootElement.querySelector('#username');
 const password = rootElement.querySelector('#password');
 const registerBtn = rootElement.querySelector('#btnCadastro');
 const submit = rootElement.querySelector('#submit');
