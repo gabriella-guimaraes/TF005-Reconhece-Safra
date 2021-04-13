@@ -6,7 +6,11 @@ export const Recommendation = () => {
     <h1>Escreva uma recomendação!</h1>
     <form id="recommendation-form">
       <label class="recommendation-page" for="userAddressee">Para:</label>
-      <input class="recommendation-page" id="userAddressee" placeholder="" required>
+      <select id="userAddressee">
+        <option>Funcionário 1</option>
+        <option>Funcionário 2</option>
+        <option>Funcionário 3</option>
+      </select>
 
       <button class="recommendation-page" id="inspirationBtn">Inspiração do projeto</button>
       <button class="recommendation-pagem" id="differenceBtn">Diferença no dia-a-dia</button>
