@@ -1,7 +1,8 @@
 export const Register = () => {
   // Coloque sua página
   const rootElement = document.createElement('div');
-  rootElement.innerHTML = `   
+  rootElement.innerHTML = ` 
+  <img class="logoSafra" src="img/logo_safra.png" alt="Logo Safra"/>  
   <main class="container">      
     <fieldset>
         <legend> Cadastre-se. </legend>
