@@ -1,0 +1,9 @@
+.responsive-wrap-navbar {
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 1rem 0;
+    background-color: #00003c;
+}

@@ -8,6 +8,16 @@ const saveUserInfo = (user, email, userName, role) => {
     }, { merge: true });
 };
 
+const saveInfoProfile = (userName) => {
+  const userProfile = firebase.auth().currentUser;
+
+  userProfile.updateProfile({
+    displayName: userName,
+  })
+    .then()
+    .catch();
+};
+
 export const createAccount = (userName, email, password, confirmPassword, role) => {
   if (password !== confirmPassword) {
     alert('A senha digitada está diferente em um dos campos');
@@ -17,6 +27,7 @@ export const createAccount = (userName, email, password, confirmPassword, role) 
   firebase.auth().createUserWithEmailAndPassword(email, password)
     .then((user) => user)
     .then((loggedUser) => {
+      saveInfoProfile(userName);
       saveUserInfo(loggedUser.user, email, userName, role);
     })
     .catch((error) => {
