@@ -33,7 +33,7 @@ submit.addEventListener('click', (event) => {
   console.log(email.value);
   console.log(password.value);
   SignIn(email.value, password.value)
-  
+  onNavigate('/feed');
 })
 
 
