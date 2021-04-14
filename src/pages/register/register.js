@@ -3,6 +3,7 @@ import { createAccount } from '../../services/index.js';
 export const Register = () => {
   // Coloque sua página
   const rootElement = document.createElement('div');
+  rootElement.className = "container-div-register"
   rootElement.innerHTML = ` 
   <img class="logoSafra" src="img/logo_safra_reconhece.png" alt="Logo Safra"/>  
   <main class="container">      
