@@ -6,12 +6,11 @@ export const Navbar = () => {
 
   navbar.innerHTML = `
   <div class="navBar">
-  <div class="nav">
-    <img class="logoNav" src="/img/logo.png" alt="logo">
+    <div class="nav">
+      <img class="logoNav" src="/img/logo.png" alt="logo">
+    </div>
   </div>
-</div>
   `;
-
 
   return navbar;
 };

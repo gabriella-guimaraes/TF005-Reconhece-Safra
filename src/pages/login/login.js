@@ -5,7 +5,6 @@ export const Login = () => {
 const rootElement = document.createElement('div');
 rootElement.className = "container-div"
 rootElement.innerHTML = `
-  <main class="container">
   <img class="logoSafra" src="img/logo_safra_reconhece.png" alt="Logo Safra"/>
     <h2>Login</h2>
     <form action="">

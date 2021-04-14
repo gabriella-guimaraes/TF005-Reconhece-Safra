@@ -3,7 +3,9 @@ import { Login } from './pages/login/login.js';
 import { Register } from './pages/register/register.js';
 import { Recommendation } from './pages/recommendation/recommendation.js';
 import { Tester } from './pages/tester/tester.js';
+import { Construction } from './pages/register/construction.js';
 import { onNavigate } from './utils/history.js';
+
 
 const routeRender = () => {
   const rootDiv = document.getElementById('root');
@@ -12,7 +14,8 @@ const routeRender = () => {
     '/feed': Feed,
     '/register': Register,
     '/recommendation': Recommendation,
-    '/tester' : Tester
+    '/tester' : Tester,
+    '/construction': Construction
 
   };
 
@@ -51,6 +54,12 @@ window.addEventListener('load', () => {
     .addEventListener('click', (e) => {
       e.preventDefault();
       onNavigate('/tester')
+    });
+    document
+    .getElementById('construction')
+    .addEventListener('click', (e) => {
+      e.preventDefault();
+      onNavigate('/construction')
     });
 
   routeRender();
