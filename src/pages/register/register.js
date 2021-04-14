@@ -5,8 +5,7 @@ export const Register = () => {
   const rootElement = document.createElement('div');
   rootElement.className = "container-div-register"
   rootElement.innerHTML = ` 
-  <img class="logoSafra" src="img/logo_safra_reconhece.png" alt="Logo Safra"/>  
-  <main class="container">      
+  <img class="logoSafra" src="img/logo_safra_reconhece.png" alt="Logo Safra"/>        
     <fieldset>
         <legend> Cadastre-se. </legend>
         <form class="register">
@@ -25,7 +24,6 @@ export const Register = () => {
           <button id="loginBtn">Login</button> 
         </form>
     </fieldset> 
-  </main>
   `;
 
   const signUpButton = rootElement.querySelector('#btn');
