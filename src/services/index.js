@@ -20,6 +20,7 @@ export const createAccount = (userName, email, password, confirmPassword, role) 
       saveUserInfo(loggedUser.user, email, userName, role);
     })
     .catch((error) => {
+      console.log(error)
       const errorCode = error.code;
       if (errorCode === 'auth/email-already-in-use') {
         alert('E-mail já cadastrado');
