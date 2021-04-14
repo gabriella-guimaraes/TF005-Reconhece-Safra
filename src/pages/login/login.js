@@ -4,7 +4,6 @@ export const Login = () => {
 const rootElement = document.createElement('div');
 rootElement.className = "container-div"
 rootElement.innerHTML = `
-  <main class="container">
   <img class="logoSafra" src="img/logo_safra_reconhece.png" alt="Logo Safra"/>
     <h2>Login</h2>
     <form action="">
@@ -20,7 +19,8 @@ rootElement.innerHTML = `
     </form>
     <span>Esqueceu a senha?</span>
     <p>Não tem conta?<button id="btnCadastro">Cadastre-se</button></p>
-`;
+    
+    `;
 
 const email = rootElement.querySelector('#username');
 const password = rootElement.querySelector('#password');
