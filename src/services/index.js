@@ -73,7 +73,27 @@ export const SignIn = (email, password) => {
   }
 };
 
+export const stayLogged = () => {
+  return firebase.auth().setPersistence(firebase.auth.Auth.Persistence.SESSION);
+};
+
 export const UsersData = () => {
   return firebase.firestore().collection('users').get()
   .then((queryReview) => queryReview.docs);
 };
+
+export const CurrentUserName = () => {
+  return firebase.auth().currentUser.get();
+  // .then((queryReview) => queryReview.docs)
+  // return firebase.firestore().collection('users').where('name', '==', firebase.auth().currentUser.name).get()
+}
+
+// export const UsersData = () => {
+//   return firebase.firestore().collection('users').where('name', '==', firebase.auth().currentUser.name).get()
+//   .then((queryReview) => queryReview.docs);
+// };
+
+// export const UserProfileInfo = () => {
+//   return firebase.auth().currentUser.name;
+//   // return firebase.firestore().collection('users').doc(UserInfoUid).get();
+// };

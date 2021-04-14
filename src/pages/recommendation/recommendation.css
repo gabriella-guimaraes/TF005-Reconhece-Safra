@@ -1,0 +1,40 @@
+.recommendation-page{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+button{
+  max-width: 50%;
+}
+
+.select-user{
+  max-width: 50%;
+}
+
+/* .recommendation{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 330px;
+  height: 350px;
+
+}
+
+input{
+  padding: 7px;
+  margin-bottom: 5px;
+  margin-left: 10px; 
+  border-radius: 5px;
+} */
