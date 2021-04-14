@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
 .container {
   display: flex;
   flex-direction: column;
@@ -39,4 +39,45 @@ legend {
     margin-bottom: 5px;
     margin-left: 10px; 
     border-radius: 5px;
+}
+
+
+
+
+/*Página em Construção*/
+.containerPrincipal {
+  top: 0;
+  width: 100%;
+  display: flex;
+  padding: 70px 0;
+  border-bottom: 2px solid #e3b15a; 
+  background-color: #00003c;
+}
+
+.navAlert { 
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logoAlert { 
+flex-grow: 1;
+max-width: 100px;
+}
+
+.construcao {
+  top: 0;
+  width: 100%;
+  display: flex;
+  padding: 120px 0;
+  background-color: #ffffff;
+}
+
+.paragrafoAlert { 
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Roboto', sans-serif;
 }
