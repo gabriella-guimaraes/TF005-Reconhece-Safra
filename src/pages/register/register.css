@@ -1,69 +1,142 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 100%;
-  width: 100%;
-}
-
 .logoSafra {
-  padding: 15%;
-  width: 70%;
-  height: 70%;
-}
-
-form {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  height: 100%;
-  width: 100%;
-}
-
-legend {
-  color: white;
+  width: 95%;
+  height: 33%;
+  margin-bottom: 13%;
+  margin-top: 10%;
 }
 
 .register {
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  width: 330px;
-  height: 350px;
+  height: 100%;
+  width: 100%;
 }
 
-.register input,
-.registerLogin input {
-    padding: 7px;
-    margin-bottom: 5px;
-    margin-left: 10px; 
-    border-radius: 5px;
+fieldset {
+  color: #ffffff;
+  width: 290px;
+  height: 335px;
 }
 
+.items {
+  width: 100%;
+  height: 100%;
+}
 
+.register input, .registerLogin input {
+  padding: 7px;
+  width: 80%;
+  height: 7%;
+  border-radius: 5px;
+  margin-left: 20px;
+  margin-top: 10px;
+}
 
+.select {
+  width: 85%;
+  height: 12%;
+  margin-left: 22px;
+  margin-top: 10px;
+}
+
+.btn {
+  padding: 10px;
+  width: 85%;
+  font-size: 17px;
+  border-radius: 7px;
+  margin-top: 10px;
+  margin-left: 22px;
+  background-color: #1E2044;
+  border-color: white;
+  color: #ffffff;
+}
+
+@media (min-width:700px) and (max-width:900px) {
+  .register {
+    margin-top: 8%;
+  }
+  .logoSafra {
+    width: 90%;
+    height: 45%;
+    margin-left: 10%;
+  }
+  fieldset {
+    width: 550px;
+    height: 430px;
+  }
+  .register input, .registerLogin input {
+    width: 77%;
+    height: 30px;
+    margin-left: 50px;
+  }
+  .select {
+    width: 80%;
+    margin-left: 51px;
+  }
+  .btn {
+    width: 80%;
+    margin-left: 50px;
+    margin-top: 25px;
+  }
+  .items {
+    margin-top: 15px;
+  }
+}
+
+@media (min-width:900px) {
+  .logoSafra {
+    width: 60%;
+    height: 70%;
+    margin-top: 3%;
+    margin-bottom: 5%;
+  }
+  fieldset {
+    width: 600px;
+    height: 450px;
+  }
+  .register input, .registerLogin input {
+    margin-left: 50px;
+  }
+  .select {
+    width: 83%;
+    height: 45px;
+    margin-left: 50px;
+  }
+  .btn {
+    width: 83%;
+    height: 52px;
+    margin-left: 50px;
+    font-size: 20px;
+  }
+  .items {
+    margin-top: 25px;
+  }
+}
 
 /*Página em Construção*/
+
 .containerPrincipal {
   top: 0;
   width: 100%;
   display: flex;
   padding: 70px 0;
-  border-bottom: 2px solid #e3b15a; 
+  border-bottom: 2px solid #e3b15a;
   background-color: #00003c;
 }
 
-.navAlert { 
+.navAlert {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.logoAlert { 
-flex-grow: 1;
-max-width: 100px;
+.logoAlert {
+  flex-grow: 1;
+  max-width: 100px;
 }
 
 .construcao {
@@ -74,7 +147,7 @@ max-width: 100px;
   background-color: #ffffff;
 }
 
-.paragrafoAlert { 
+.paragrafoAlert {
   width: 100%;
   display: flex;
   align-items: center;

@@ -2,6 +2,7 @@ import { UsersData } from '../../services/index.js';
 export const Recommendation = () => {
   // Coloque sua página
   const rootElement = document.createElement('div');
+  rootElement.className = "container-div-register"
   rootElement.innerHTML = `
   <div class="recommendation-page">
     <h1>Escreva uma recomendação!</h1>

@@ -3,29 +3,30 @@ import { createAccount } from '../../services/index.js';
 export const Register = () => {
   // Coloque sua página
   const rootElement = document.createElement('div');
-  rootElement.className = "container-div-register"
+  rootElement.className = "container-div"
   rootElement.innerHTML = ` 
+  <div class="container">
   <img class="logoSafra" src="img/logo_safra_reconhece.png" alt="Logo Safra"/>  
-  <main class="container">      
-    <fieldset>
-        <legend> Cadastre-se. </legend>
         <form class="register">
+        <fieldset>
+        <legend> Cadastre-se! </legend>
+        <div class="items">
           <input type="text" id="name" placeholder="Nome" required autocomplete="off">
           <input type="email" id="email" placeholder="Email" required autocomplete="off">
           <input id="passwordFirst" type="password" placeholder="Digite uma senha 6 digitos" required autocomplete="off">
           <input id="passwordSecond" type="password" placeholder="Confirme sua senha" required autocomplete="off">
-          <select id="select" class"select">
+          <select id="select" class="select">
           <option>Área de atuação</option>
           <option>RH</option>
           <option>Financeiro</option>
           <option>Marketing</option>
           <option>T.I.</option>
           </select>
-          <button id="btn">Cadastrar</button>
-          <button id="loginBtn">Login</button> 
+          <button id="btn" class="btn">Cadastrar</button>
+        </div>
+        </fildset>
         </form>
-    </fieldset> 
-  </main>
+    </div>
   `;
 
   const signUpButton = rootElement.querySelector('#btn');
