@@ -72,3 +72,8 @@ export const SignIn = (email, password) => {
       });
   }
 };
+
+export const UsersData = () => {
+  return firebase.firestore().collection('users').get()
+  .then((queryReview) => queryReview.docs);
+};
