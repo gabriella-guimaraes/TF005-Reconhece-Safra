@@ -3,11 +3,14 @@ import { createAccount } from '../../services/index.js';
 export const Register = () => {
   // Coloque sua página
   const rootElement = document.createElement('div');
-  rootElement.className = "container-div-register"
+  rootElement.className = "container-div"
   rootElement.innerHTML = ` 
   <div class="container">
   <img class="logoSafra" src="img/logo_safra_reconhece.png" alt="Logo Safra"/>  
         <form class="register">
+        <fieldset>
+        <legend> Cadastre-se! </legend>
+        <div class="items">
           <input type="text" id="name" placeholder="Nome" required autocomplete="off">
           <input type="email" id="email" placeholder="Email" required autocomplete="off">
           <input id="passwordFirst" type="password" placeholder="Digite uma senha 6 digitos" required autocomplete="off">
@@ -20,8 +23,9 @@ export const Register = () => {
           <option>T.I.</option>
           </select>
           <button id="btn" class="btn">Cadastrar</button>
+        </div>
+        </fildset>
         </form>
-    </div>
     </div>
   `;
 

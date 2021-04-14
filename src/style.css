@@ -6,11 +6,13 @@ main {
 }
 
 .container-div {
-  background-color: #00003C;
+  background:#00003C;
+  height: 100vh;
+  display: flex
 }
 
-.container-div-register{
-  background-color: #00003C;
+ul {
+  display: none;
 }
 
 * {
