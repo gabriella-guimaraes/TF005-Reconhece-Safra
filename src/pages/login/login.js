@@ -1,4 +1,5 @@
 import { onNavigate } from '../../utils/history.js';
+import { SignIn } from '../../services/index.js'
 
 export const Login = () => {
 const rootElement = document.createElement('div');
@@ -26,10 +27,12 @@ const password = rootElement.querySelector('#password');
 const registerBtn = rootElement.querySelector('#btnCadastro');
 const submit = rootElement.querySelector('#submit');
 
-submit.addEventListener('click', () => {
+submit.addEventListener('click', (event) => {
+  event.preventDefault()
   console.log(email.value);
   console.log(password.value);
-
+  SignIn(email.value, password.value)
+  
 })
 
 
