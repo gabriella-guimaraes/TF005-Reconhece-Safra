@@ -1,3 +1,4 @@
+import { onNavigate } from '../../utils/history.js';
 
 export const Construction = () => {
     // Coloque sua página
@@ -11,11 +12,17 @@ export const Construction = () => {
     <div class="construcao">
         <h1 class="paragrafoAlert"> Página em Construção </h1>
     </div>
-    <div class="responsive-wrap-navbar">
-      <i id="icon-nav-feed" class="fas fa-arrow-alt-circle-left" style="color:#ffff"></i>
+    <div  class="responsive-wrap-navbar">
+      <i id="wrapNavbar" class="fas fa-arrow-alt-circle-left" style="color:#ffff"></i>
     
     </div>
  
   `;
+  const wrapNavbar = rootElement.querySelector('#wrapNavbar');
+
+  wrapNavbar.addEventListener('click', () => {
+    onNavigate('/');
+  })
+
     return rootElement;
 };
