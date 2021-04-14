@@ -1,25 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+}
 
-html,
-body,
-main {
-  width: 100%;
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   height: 100%;
+  width: 100%;
 }
-.username, .password {
-  width: 150%;
-  padding: 8px;
-  margin-bottom: 7px;
-  border-radius: 9px;
-}
-.btnLogin {
-  justify-content: center;
-  padding: 11px;
-  width: 80%;
-  font-weight: bold;
-  font-size: 17px;
-  border-radius: 9px;
-  background-color: #1E2044;
-  color: white;
-  margin-top: 50px;
-  border: 8px, white;
-}
+

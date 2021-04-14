@@ -6,6 +6,14 @@ main {
   background-color: #ffffff;
 }
 
+.container-div {
+  background-color: #00003C;
+}
+
+.container-div-register{
+  background-color: #00003C;
+}
+
 * {
   margin: 0;
   padding: 0;
