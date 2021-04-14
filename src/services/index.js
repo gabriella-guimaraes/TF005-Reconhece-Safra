@@ -1,3 +1,6 @@
+import { onNavigate } from '../utils/history.js';
+
+
 const saveUserInfo = (user, email, userName, role) => {
   firebase.firestore().collection('users').doc(email)
     .set({
@@ -29,6 +32,7 @@ export const createAccount = (userName, email, password, confirmPassword, role) 
     .then((loggedUser) => {
       saveInfoProfile(userName);
       saveUserInfo(loggedUser.user, email, userName, role);
+      onNavigate('/feed');
     })
     .catch((error) => {
       console.log(error)
@@ -55,6 +59,7 @@ export const SignIn = (email, password) => {
   } else {
     firebase.auth().signInWithEmailAndPassword(email, password)
       .then(() => {
+        onNavigate('/feed');
       })
       .catch((error) => {
         const errorCode = error.code;
