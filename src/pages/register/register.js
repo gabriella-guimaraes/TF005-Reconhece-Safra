@@ -13,14 +13,14 @@ export const Register = () => {
           <input type="email" id="email" placeholder="Email" required autocomplete="off">
           <input id="passwordFirst" type="password" placeholder="Digite uma senha 6 digitos" required autocomplete="off">
           <input id="passwordSecond" type="password" placeholder="Confirme sua senha" required autocomplete="off">
-          <select id="select" class"select">
+          <select id="select" class="select">
           <option>Área de atuação</option>
           <option>RH</option>
           <option>Financeiro</option>
           <option>Marketing</option>
           <option>T.I.</option>
           </select>
-          <button id="btn">Cadastrar</button>
+          <button id="btn" class="btn">Cadastrar</button>
         </form>
     </fieldset> 
   </main>
