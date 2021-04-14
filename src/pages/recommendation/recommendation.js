@@ -1,3 +1,4 @@
+import { UsersData } from '../../services/index.js';
 export const Recommendation = () => {
   // Coloque sua página
   const rootElement = document.createElement('div');
@@ -7,9 +8,6 @@ export const Recommendation = () => {
     <form id="recommendation-form">
       <label class="recommendation-page" for="userAddressee">Para:</label>
       <select id="userAddressee">
-        <option>Funcionário 1</option>
-        <option>Funcionário 2</option>
-        <option>Funcionário 3</option>
       </select>
 
       <button class="recommendation-page" id="inspirationBtn">Inspiração do projeto</button>
@@ -20,7 +18,7 @@ export const Recommendation = () => {
   </div>
   `;
 
-  const userAddressee = rootElement.querySelector('#userAddressee');
+  // const userAddressee = rootElement.querySelector('#userAddressee');
   const inspirationBtn = rootElement.querySelector('#inspirationBtn');
   const differenceBtn = rootElement.querySelector('#differenceBtn');
   const referenceBtn = rootElement.querySelector('#referenceBtn');
@@ -28,7 +26,6 @@ export const Recommendation = () => {
 
   inspirationBtn.addEventListener('click', (event) => {
     event.preventDefault();
-    console.log('clicou');
     const modalTemplate = `
     <div class="recommendation-page">
       <p>Para quem inspirou em uma ação ou projeto específico</p>
@@ -42,7 +39,6 @@ export const Recommendation = () => {
 
   referenceBtn.addEventListener('click', (event) => {
     event.preventDefault();
-    console.log('clicou');
     const modalTemplate = `
     <div class="recommendation-page">
       <p>Para quem se destaca em alguma atitude.</p>
@@ -84,7 +80,6 @@ export const Recommendation = () => {
 
   differenceBtn.addEventListener('click', (event) => {
     event.preventDefault();
-    console.log('clicou');
     const modalTemplate = `
     <div class="recommendation-page">
       <p>Para quem ajuda as pessoas e os times a se desenvolverem: com feedbacks, dicas, orientações.</p>
@@ -119,6 +114,39 @@ export const Recommendation = () => {
     recommendationForm.innerHTML += modalTemplate
   })
 
+  // function loadUsers(){
+  //   const data = UsersData();
+  //   for (let i = 0; i < data.length; i++){
+  //     console.log('hey')
+  //     let option = rootElement.createElement('option');
+  //     option.value = data.name
+  //     userAddressee.add(option);
+  //   }
+  // }
+  // loadUsers()
+  function loadUsers() {
+    UsersData()
+      .then((doc) => {
+        // console.log(doc.data().name);
+        doc.forEach((user) => {
+          // console.log(doc.user);
+          const userAddressee = rootElement.querySelector('#userAddressee');
+          let option = document.createElement('option');
+          option.value = user.data().name;
+          option.text = user.data().name;
+          userAddressee.add(option);
+        })
+      });
+     
+  }
+  loadUsers();
+  // console.log(UsersData())
+
 
   return rootElement;
 };
+
+
+{/* <option>Funcionário 1</option>
+<option>Funcionário 2</option>
+<option>Funcionário 3</option> */}
