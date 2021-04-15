@@ -82,3 +82,12 @@ export const UsersData = () => {
   return firebase.firestore().collection('users').get()
   .then((queryReview) => queryReview.docs);
 };
+
+export const ForgotPassword = (email) => {
+  const auth = firebase.auth();
+  auth.sendPasswordResetEmail(email).then(function() {
+    alert('Email enviado. Por favor olhe sua caixa de emails.')
+  }).catch(() => {
+    alert('Ops, algo deu errado. Por favor tente mais tarde.')
+  });
+}

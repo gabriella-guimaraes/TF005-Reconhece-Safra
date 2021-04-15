@@ -3,7 +3,6 @@ import { Navbar } from '../../components/navbar/navBar.js';
 import { Footer } from '../../components/footer/footer.js';
 
 export const Recommendation = () => {
-  // Coloque sua página
   const rootElement = document.createElement('div');
   rootElement.appendChild(Navbar());
   rootElement.className = "container-div-register"
@@ -13,11 +12,13 @@ export const Recommendation = () => {
     <form id="recommendation-form">
       <label class="recommendation-page" for="userAddressee">Para:</label>
       <select id="userAddressee">
+      <option> </option>
       </select>
 
       <button class="recommendation-page" id="inspirationBtn">Inspiração do projeto</button>
-      <button class="recommendation-pagem" id="differenceBtn">Diferença no dia-a-dia</button>
+      <button class="recommendation-page" id="differenceBtn">Diferença no dia-a-dia</button>
       <button class="recommendation-page" id="referenceBtn">Referência em atitude Safra</button>
+      <div id="recommendation"></div>
 
     </form>
   </div>
@@ -29,7 +30,7 @@ export const Recommendation = () => {
   const inspirationBtn = rootElement.querySelector('#inspirationBtn');
   const differenceBtn = rootElement.querySelector('#differenceBtn');
   const referenceBtn = rootElement.querySelector('#referenceBtn');
-  const recommendationForm = rootElement.querySelector('#recommendation-form');
+  const recommendationForm = rootElement.querySelector('#recommendation');
 
   inspirationBtn.addEventListener('click', (event) => {
     event.preventDefault();
@@ -37,11 +38,11 @@ export const Recommendation = () => {
     <div class="recommendation-page">
       <p>Para quem inspirou em uma ação ou projeto específico</p>
       <label class="recommendation-page" for="model-recommendation" >Escreva sua mensagem aqui:</label>
-      <input class="recommendation-page" id="model-recommendation" required>
+      <input class="recommendation-page" id="model-recommendation" maxLength="500">
       <button class="recommendation-page" id="submit-recommendation">Enviar</button>
     </div>
     `
-    recommendationForm.innerHTML += modalTemplate
+    recommendationForm.innerHTML = modalTemplate
   })
 
   referenceBtn.addEventListener('click', (event) => {
@@ -77,12 +78,12 @@ export const Recommendation = () => {
       </div>
 
       <label class="recommendation-page" for="model-recommendation" >Escreva sua mensagem aqui:</label>
-      <input class="recommendation-page" id="model-recommendation" required>
+      <input class="recommendation-page" id="model-recommendation" maxLength="500">
 
       <button class="recommendation-page" id="submit-recommendation">Enviar</button>
     </div>
     `
-    recommendationForm.innerHTML += modalTemplate
+    recommendationForm.innerHTML = modalTemplate
   })
 
   differenceBtn.addEventListener('click', (event) => {
@@ -113,30 +114,17 @@ export const Recommendation = () => {
       </div>
 
       <label class="recommendation-page" for="model-recommendation" >Escreva sua mensagem aqui:</label>
-      <input class="recommendation-page" id="model-recommendation">
+      <input class="recommendation-page" id="model-recommendation" maxLength="500">
 
       <button class="recommendation-page" id="submit-recommendation">Enviar</button>
     </div>
     `
-    recommendationForm.innerHTML += modalTemplate
+    recommendationForm.innerHTML = modalTemplate
   })
-
-  // function loadUsers(){
-  //   const data = UsersData();
-  //   for (let i = 0; i < data.length; i++){
-  //     console.log('hey')
-  //     let option = rootElement.createElement('option');
-  //     option.value = data.name
-  //     userAddressee.add(option);
-  //   }
-  // }
-  // loadUsers()
   function loadUsers() {
     UsersData()
       .then((doc) => {
-        // console.log(doc.data().name);
         doc.forEach((user) => {
-          // console.log(doc.user);
           const userAddressee = rootElement.querySelector('#userAddressee');
           let option = document.createElement('option');
           option.value = user.data().name;
@@ -147,13 +135,6 @@ export const Recommendation = () => {
      
   }
   loadUsers();
-  // console.log(UsersData())
-
-
+  
   return rootElement;
 };
-
-
-{/* <option>Funcionário 1</option>
-<option>Funcionário 2</option>
-<option>Funcionário 3</option> */}

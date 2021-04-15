@@ -1,5 +1,5 @@
 import { onNavigate } from '../../utils/history.js';
-import { SignIn } from '../../services/index.js'
+import { SignIn, ForgotPassword } from '../../services/index.js'
 
 export const Login = () => {
   const rootElement = document.createElement('div');
@@ -16,28 +16,34 @@ export const Login = () => {
       <p>Não tem conta?<button class="registerBtn" id="btnCadastro">Cadastre-se</button></p>
       </div>
       <div class="recoverPassword"
-      <p>Esqueceu sua senha?<button class="recoverBtn" id="btnCadastro">Clique aqui!</button></p>
+      <p>Esqueceu sua senha?<button class="recoverBtn" id="forgot-password">Clique aqui!</button></p>
       </div> 
       </div>
     </form>
     </div>
-`;
+  `;
 
   const email = rootElement.querySelector('#username');
   const password = rootElement.querySelector('#password');
   const registerBtn = rootElement.querySelector('#btnCadastro');
   const submit = rootElement.querySelector('#submit');
+  const forgotPassword = rootElement.querySelector('#forgot-password');
 
-submit.addEventListener('click', (event) => {
-  event.preventDefault()
-  console.log(email.value);
-  console.log(password.value);
-  SignIn(email.value, password.value)
-  onNavigate('/feed');
-})
+  submit.addEventListener('click', (event) => {
+    event.preventDefault()
+    console.log(email.value);
+    console.log(password.value);
+    SignIn(email.value, password.value)
+    onNavigate('/feed');
+  })
 
   registerBtn.addEventListener('click', () => {
     onNavigate('/register');
+  })
+
+  forgotPassword.addEventListener('click', (event) =>{
+    event.preventDefault();
+    ForgotPassword(email.value);
   })
 
   return rootElement;
