@@ -1,0 +1,40 @@
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.title-feed {
+  font-size: 30px;
+  margin-top: 5vh;
+  margin-left: 5vh;
+}
+
+.filterSelect {
+  margin-top: 5vh;
+  margin-left: 5vh;
+}
+
+@media (min-width:300px) and (max-width:699px) {
+  .title-feed {
+    font-size: 20px;
+  }
+}
+
+@media (min-width:700px) and (max-width:900px) {
+  .title-feed {
+    font-size: 30px;
+  }
+}
+
+@media (min-width:901px) and (max-width:1449px) {
+  .title-feed {
+    font-size: 30px;
+  }
+}
+
+@media (min-width:1500px) {
+  .title-feed {
+    font-size: 30px;
+  }
+}

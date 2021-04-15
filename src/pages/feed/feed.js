@@ -7,7 +7,7 @@ export const Feed = () => {
   const rootElement = document.createElement('div');
   rootElement.appendChild(Navbar());
   rootElement.innerHTML += `
-      <h1>Feed de recomendações</h1>
+      <h1 class="title-feed">Feed de recomendações</h1>
 
       <div class="filterSelect">
         <select name="filter" id="filter">
@@ -17,7 +17,8 @@ export const Feed = () => {
           <option value="Diferença no dia-a-dia">Diferença no dia a dia</option>
         </select>     
       </div> 
-      <div id="cards"></div>
+      <div id="cards" class="cards"></div>
+      <div class="space-card"></div>
   `;
   
   const selectOption = rootElement.querySelector('#filter');

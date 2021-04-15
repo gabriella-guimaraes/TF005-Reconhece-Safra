@@ -114,12 +114,6 @@ export const createCard = async(userToId, recommendationType, recommendationText
     })
     return loggedUser;
   });
-  
-  console.log('logado', userFrom);
-  console.log('para', userTo);
-  console.log('recType', recommendationType);
-  console.log('recText', recommendationText);
-  console.log('recAtti', attitudeSafra);
 
   firebase.firestore().collection('cards').add({
     user_from: {
