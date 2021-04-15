@@ -20,7 +20,7 @@ export const Feed = () => {
       <div id="cards" class="cards"></div>
       <div class="space-card"></div>
   `;
-  
+
   const selectOption = rootElement.querySelector('#filter');
 
   selectOption.addEventListener('change', (event) => {
@@ -34,11 +34,11 @@ export const Feed = () => {
     getCard(filter).then((doc) => {
       rootElement.querySelector('#cards').innerHTML = '';
       doc.forEach((card) => {
-        rootElement.querySelector('#cards').appendChild(Card(card.data())); 
+        rootElement.querySelector('#cards').appendChild(Card(card.data()));
       })
     })
   }
-  
+
   showCards('');
   rootElement.appendChild(Footer());
   return rootElement;
