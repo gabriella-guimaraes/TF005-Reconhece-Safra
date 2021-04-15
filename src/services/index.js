@@ -138,3 +138,20 @@ export const createCard = async(userToId, recommendationType, recommendationText
     createdAt: date.toLocaleString('pt-BR'),
   })
 };
+
+export const getCard = (filter) => {
+  let db = firebase.firestore().collection('cards');
+  const recommendationType = [
+    'Inspiração no Projeto',
+    'Atitudes Safra',
+    'Diferença no dia-a-dia'
+  ];
+
+  if (filter) {
+    if (recommendationType.includes(filter)) {
+      db = firebase.firestore().collection('cards').where('recommendation', '==', filter)
+    }
+  }
+
+  return db.get().then((queryReview) => queryReview.docs);
+};
