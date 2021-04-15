@@ -2,17 +2,36 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin-top: 32%;
 }
 
 .title-feed {
   font-size: 30px;
   margin-top: 5vh;
   margin-left: 5vh;
+  color: #00003c;
+  font-weight: 100;
+}
+.titlleFeed {
+  width: 100%;
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+
 }
 
+
 .filterSelect {
-  margin-top: 5vh;
-  margin-left: 5vh;
+  
+    margin-left: 5vh;
+    height: 40px;
+    margin-top: 55vh;
+    width: 100%;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
 }
 
 @media (min-width:300px) and (max-width:699px) {

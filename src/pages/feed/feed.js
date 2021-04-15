@@ -1,4 +1,5 @@
 import { Navbar } from '../../components/navbar/navBar.js';
+import { Tester } from '../../components/tester/tester.js';
 import { Footer } from '../../components/footer/footer.js';
 import { Card } from '../../components/card/index.js';
 import { getCard } from '../../services/index.js';
@@ -6,17 +7,21 @@ import { getCard } from '../../services/index.js';
 export const Feed = () => {
   const rootElement = document.createElement('div');
   rootElement.appendChild(Navbar());
+  rootElement.appendChild(Tester());
   rootElement.innerHTML += `
-      <h1 class="title-feed">Feed de recomendações</h1>
-
+  
+   <!-- <div class="titlleFeed">
+      <h1 class="title-feed">Feed de Recomendações</h1>
+      </div> -->
       <div class="filterSelect">
-        <select name="filter" id="filter">
+        <select style="height: 40px; width: 50%" name="filter" id="filter">
           <option selected>Filtro</option>
           <option value="Inspiração no Projeto">Inspiração do projeto</option>
           <option value="Atitudes Safra">Atitudes Safra</option>        
           <option value="Diferença no dia-a-dia">Diferença no dia a dia</option>
         </select>     
-      </div> 
+     
+      </div>
       <div id="cards" class="cards"></div>
       <div class="space-card"></div>
   `;
