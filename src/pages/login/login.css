@@ -24,7 +24,7 @@
 form {
   display: flex;
   justify-content: center;
-  width: 70%;
+  width: 75%;
   height: 50%;
   margin: 0 auto;
 }
@@ -51,7 +51,7 @@ form {
 
 .btnLogin {
   padding: 10px;
-  width: 108%;
+  width: 107%;
   font-size: 17px;
   border-radius: 7px;
   margin-top: 30px;
@@ -69,6 +69,7 @@ form {
   color: white;
   border: none;
   cursor: pointer;
+  margin-left: 5px;
 }
 
 .buttonLogin {
@@ -79,8 +80,60 @@ form {
 
 .recoverPassword {
   width: 100%;
-  margin-left: 20px;
+  margin-left: 9px;
   margin-top: 4%;
-  font-size: 15px;
+  font-size: 17px;
   color: #ffffff;
+}
+
+@media (min-width:700px) and (max-width:900px) {
+  .btnLogin {
+    width: 103%;
+  }
+  .buttonLogin {
+    margin-left: 150px;
+    font-size: 20px;
+  }
+  .recoverPassword {
+    margin-left: 125px;
+    font-size: 20px;
+  }
+  .registerBtn {
+    font-size: 20px;
+  }
+  .recoverBtn {
+    font-size: 20px;
+  }
+}
+
+@media (min-width:1500px) {
+  .logo-safra {
+    width: 80%;
+    height: 30%;
+    margin-left: -50%;
+  }
+  .username, .password {
+    width: 55%;
+    margin-left: 45%;
+  }
+  .btnLogin {
+    width: 57%;
+    margin-left: 45%;
+  }
+  .buttonLogin {
+    margin-left: 60%;
+    margin-top: 5%;
+    font-size: 22px;
+  }
+  .recoverPassword {
+    margin-left: 57%;
+    font-size: 22px;
+  }
+  .registerBtn {
+    width: 30%;
+    font-size: 22px;
+  }
+  .recoverBtn {
+    font-size: 22px;
+  }
 }

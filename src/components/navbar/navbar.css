@@ -4,18 +4,19 @@
     display: flex;
     padding: 10px 0;
     flex-wrap: wrap;
-    border-bottom: 2px solid #e3b15a; 
+    border-bottom: 2px solid #e3b15a;
     background-color: #00003c;
 }
 
-.nav { 
+.nav {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.logoNav { 
-flex-grow: 1;
-max-width: 100px;
+.logoNav {
+    flex-grow: 1;
+    max-width: 110px;
+    margin-right: 80%;
 }
