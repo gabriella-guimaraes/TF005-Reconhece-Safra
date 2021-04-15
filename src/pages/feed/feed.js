@@ -14,7 +14,7 @@ export const Feed = () => {
       <h1 class="title-feed">Reconhece Safra</h1>
       </div>
       <div class="filterSelect">
-        <select style="height: 40px; width: 50%" name="filter" id="filter">
+        <select style="height: 60px; width: 60%" name="filter" id="filter">
           <option selected>Filtro</option>
           <option value="Inspiração no Projeto">Inspiração do projeto</option>
           <option value="Atitudes Safra">Atitudes Safra</option>        
