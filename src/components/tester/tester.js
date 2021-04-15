@@ -15,14 +15,14 @@ export const Tester = () => {
 </div>
 </div>
 <div class="badges">
-<img class="jss9" src="components/tester/imgBadges/badges.png" style="border-radius: 80px; height: 100px" alt="logo">
-<img class="jss9" src="components/tester/imgBadges/badges(5).png" style="border-radius: 80px; height: 100px"
+
+<img class="jss9" src="components/tester/imgBadges/liderança_5(1).png" style="height: 100px"
   alt="logo">
-<img class="jss9" src="components/tester/imgBadges/badges(10).png" style="border-radius: 80px; height: 100px"
+<img class="jss9" src="components/tester/imgBadges/especialista_sete(1).png" style=" height: 100px"
   alt="logo">
-<img class="jss9" src="components/tester/imgBadges/badges(13).png" style="border-radius: 80px; height: 100px"
+<img class="jss9" src="components/tester/imgBadges/inclusivo_3(1).png" style=" height: 100px"
   alt="logo">
-<img class="jss9" src="components/tester/imgBadges/badges(16).png" style="border-radius: 80px; height: 100px"
+<img class="jss9" src="components/tester/imgBadges/resiliencia_3.png" style="height: 100px; margin-top:10px"
   alt="logo">
 </div>
    
