@@ -6,32 +6,31 @@
 }
 
 .title-feed {
-  font-size: 30px;
-  margin-top: 5vh;
+  font-size: 35px;
+  margin-top: 1vh;
   margin-left: 5vh;
   color: #00003c;
   font-weight: 100;
+  text-align: left;
 }
-.titlleFeed {
+
+/*.titlleFeed {
   width: 100%;
   display: flex;
   position: absolute;
   align-items: center;
   justify-content: center;
-
-}
+}*/
 
 
 .filterSelect {
-  
-    margin-left: 5vh;
+    margin-left: 2vh;
     height: 40px;
-    margin-top: 55vh;
     width: 100%;
+    margin-top: 25vh;
     display: flex;
     position: absolute;
     align-items: center;
-    justify-content: center;
 }
 
 @media (min-width:300px) and (max-width:699px) {
@@ -42,8 +41,26 @@
 
 @media (min-width:700px) and (max-width:900px) {
   .title-feed {
-    font-size: 30px;
+    font-size: 35px;
+    margin-left: 1vh;
   }
+
+  .filterSelect {
+    margin-left: 2vh;
+    height: 40px;
+    width: 100%;
+    margin-top: 30vh;
+    display: flex;
+    position: absolute;
+    align-items: center;
+  }
+
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:right;
+  }
+
 }
 
 @media (min-width:901px) and (max-width:1449px) {
