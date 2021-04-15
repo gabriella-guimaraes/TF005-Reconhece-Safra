@@ -15,7 +15,7 @@ export const Feed = () => {
       </div>
       <div class="filterSelect">
         <select style="height: 60px; width: 60%" name="filter" id="filter">
-          <option selected>Filtro</option>
+          <option selected style=font-size:20px">Filtro</option>
           <option value="Inspiração no Projeto">Inspiração do projeto</option>
           <option value="Atitudes Safra">Atitudes Safra</option>        
           <option value="Diferença no dia-a-dia">Diferença no dia a dia</option>
