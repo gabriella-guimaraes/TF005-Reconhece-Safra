@@ -46,10 +46,10 @@
   }
 
   .filterSelect {
-    margin-left: 2vh;
+    margin-left: 15vh;
     height: 40px;
     width: 100%;
-    margin-top: 30vh;
+    margin-top: 33vh;
     display: flex;
     position: absolute;
     align-items: center;

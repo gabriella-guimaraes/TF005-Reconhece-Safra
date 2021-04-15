@@ -1,10 +1,11 @@
 .jss8 {
-  width: 100%;
-  display: flex;
-  position: absolute;
-  align-items: center;
-  justify-content: center;
-  
+    width: 100%;
+    margin-left: 3vh;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    margin-top: 30px;
+    justify-content: center;
 }
 
 .nomesCargos{
@@ -15,12 +16,13 @@
 }
 
 .badges {
-  width: 100%;
-  display: flex;
-  position: absolute;
-  align-items: center;
-  justify-content: center;
-  padding-top: 295px;
-  border-radius: 80px;
-  height: 30px;
+    width: 100%;
+    display: flex;
+    margin-left: 110px;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    padding-top: 309px;
+    border-radius: 80px;
+    height: 30px;
 }
