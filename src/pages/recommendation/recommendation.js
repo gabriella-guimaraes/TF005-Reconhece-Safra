@@ -15,9 +15,9 @@ export const Recommendation = () => {
       <option> Para: </option>
       </select>
 
-      <button class="recommendation-page" id="inspirationBtn">Inspiração do projeto</button>
-      <button class="recommendation-page" id="differenceBtn">Diferença no dia-a-dia</button>
-      <button class="recommendation-page" id="referenceBtn">Referência em atitude Safra</button>
+      <button class="page" id="inspirationBtn">Inspiração do projeto</button>
+      <button class="page" id="differenceBtn">Diferença no dia-a-dia</button>
+      <button class="page" id="referenceBtn">Referência em atitude Safra</button>
       <div class="recommendation" id="recommendation"></div>
       <div class="space"></div>
 
@@ -43,7 +43,7 @@ export const Recommendation = () => {
       <input class="recommendation-page" id="model-recommendation" maxLength="500" placeholder="Escreva sua mensagem aqui!">
       </div>
       </div>
-      <button class="recommendation-page" id="submit-recommendation">Enviar</button>
+      <button class="page" id="submit-recommendation">Enviar</button>
     </div>
     `
     recommendationForm.innerHTML = modalTemplate

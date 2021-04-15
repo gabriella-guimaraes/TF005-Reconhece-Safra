@@ -9,8 +9,6 @@
 	border: 1px solid silver;
 	border-radius: 10px;
 	margin-bottom: 5vh;
-	text-align: center;
-	filter: drop-shadow(0 0 0.45rem rgb(17, 17, 17));
 	flex-wrap: wrap;
 	background-color: rgb(253, 253, 250);
 }
@@ -32,6 +30,15 @@
 .cardInfo {
   margin-top: 2vh;
   text-align: left;
+  color: #00003c;
+}
+
+.text-card-from-to {
+  font-weight: bolder;
+}
+
+.text-card {
+  font-weight: normal;
 }
 
 .space-card {
@@ -50,8 +57,32 @@
 @media (min-width:700px) and (max-width:900px) {
   .container-card {
     display: inline-block;
-    width: 40vw;
-    height: 80vh;
+    width: 60vw;
+    height: 65vh;
+    margin-top: 15vh;
+  }
+
+  .cardInfo {
+    margin-top: 2vh;
+    text-align: left;
+    color: #00003c;
+    
+  }
+  
+  .text-card-from-to {
+    font-weight: bold;
+    text-align: left;
+    font-size: 30px;
+  }
+  
+  .text-card {
+    font-weight: normal;
+    font-size: 25px;
+  }
+
+  .title {
+    text-align: left;
+    margin: 0 auto;
   }
 }
 
