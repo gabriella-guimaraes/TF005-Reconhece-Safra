@@ -4,11 +4,11 @@ export const Tester = () => {
   rootElement.innerHTML = `
     
     <div class="jss6">
-    <div class="jss8"><img class="jss9" src="https://thispersondoesnotexist.com/image" style="height: 200px;
+    <div class="jss8"><img class="jss9" src="https://thispersondoesnotexist.com/image" style="height: 150px;
     border-radius: 100px" alt="logo">
     <div class="nomesCargos">
-    <h1 id="nameUser">Bem-Vindo(a): Sara Viana Carneiro</h1>
-    <h1>Área: Cargo</h1>
+    <h2 id="nameUser">Bem-Vindo(a): Sara Viana Carneiro</h2>
+    <h2>Área: Cargo</h2>
     <h1 style="padding-top:30px">Badges Recebidos:</h1>      
     </div>
     </div>
