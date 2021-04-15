@@ -10,17 +10,16 @@ export const Feed = () => {
   rootElement.appendChild(Tester());
   rootElement.innerHTML += `
   
-   <!-- <div class="titlleFeed">
-      <h1 class="title-feed">Feed de Recomendações</h1>
-      </div> -->
+      <div class="titlleFeed">
+      <h1 class="title-feed">Reconhece Safra</h1>
+      </div>
       <div class="filterSelect">
         <select style="height: 40px; width: 50%" name="filter" id="filter">
           <option selected>Filtro</option>
           <option value="Inspiração no Projeto">Inspiração do projeto</option>
           <option value="Atitudes Safra">Atitudes Safra</option>        
           <option value="Diferença no dia-a-dia">Diferença no dia a dia</option>
-        </select>     
-     
+        </select>
       </div>
       <div id="cards" class="cards"></div>
       <div class="space-card"></div>
