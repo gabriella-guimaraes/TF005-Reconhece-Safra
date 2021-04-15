@@ -1,5 +1,9 @@
+import { Navbar } from '../../components/navbar/navBar.js';
+import { Footer } from '../../components/footer/footer.js';
+
 export const Feed = () => {
   const rootElement = document.createElement('div');
+  rootElement.appendChild(Navbar());
   rootElement.innerHTML = `
       <h1>Feed de recomendações</h1>
 
@@ -13,6 +17,8 @@ export const Feed = () => {
         </select>     
       </div> 
   `;  
+  rootElement.appendChild(Footer());
   return rootElement;
 
 };
+
