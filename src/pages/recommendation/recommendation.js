@@ -6,7 +6,7 @@ export const Recommendation = () => {
   const rootElement = document.createElement('div');
   rootElement.appendChild(Navbar());
   rootElement.className = "container-div-register"
-  rootElement.innerHTML = `
+  rootElement.innerHTML += `
   <div class="recommendation-page">
     <h1>Escreva uma recomendação!</h1>
     <form id="recommendation-form">
@@ -205,7 +205,7 @@ export const Recommendation = () => {
           userAddressee.add(option);
         })
       });
-     
+ 
   }
   loadUsers();
   
