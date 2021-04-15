@@ -1,0 +1,65 @@
+.intro{
+  text-align: center;
+}
+
+.recommendation-form{
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  width: 75%;
+  height: 50%;
+  margin: 0 auto;
+  margin-top: 14px;
+}
+
+button{
+  width: 100%;
+  height: 58px;
+  background-color: #00003c;
+  margin-top: 8px;
+  border-style: none;
+  color: white;
+  font-size: 16px;
+}
+
+.userSelect{
+  height: 40px;
+}
+
+.recommendation{
+  margin-top: 20px;
+}
+
+#model-recommendation{
+  width: 100%;
+  height: 40px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+label{
+  font-size: 22px;
+}
+
+h2{
+  font-size: 34px;
+  margin-bottom: 7px;
+  margin-top: 6px;
+}
+
+.space{
+  width: 100%;
+  height: 13vh;
+}
+
+@media (min-width:1000px){
+  .recommendation-form{
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    width: 70%;
+    height: 50%;
+    margin: 0 auto;
+    font-size: 26px;
+  }
+}

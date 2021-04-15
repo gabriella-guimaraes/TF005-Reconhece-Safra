@@ -8,17 +8,18 @@ export const Recommendation = () => {
   rootElement.className = "container-div-register"
   rootElement.innerHTML += `
   <div class="recommendation-page">
-    <h1>Escreva uma recomendação!</h1>
-    <form id="recommendation-form">
+    <h1 class="intro">Escreva uma recomendação!</h1>
+    <form class="recommendation-form" id="recommendation-form">
       <label class="recommendation-page" for="userAddressee">Para:</label>
-      <select id="userAddressee">
+      <select class="userSelect" id="userAddressee">
       <option> </option>
       </select>
 
       <button class="recommendation-page" id="inspirationBtn">Inspiração do projeto</button>
       <button class="recommendation-page" id="differenceBtn">Diferença no dia-a-dia</button>
       <button class="recommendation-page" id="referenceBtn">Referência em atitude Safra</button>
-      <div id="recommendation"></div>
+      <div class="recommendation" id="recommendation"></div>
+      <div class="space"></div>
 
     </form>
   </div>
