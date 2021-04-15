@@ -2,7 +2,8 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-top: 32%;
+  margin-top: 50%;
+  margin-right: 8%;
 }
 
 .title-feed {

@@ -57,16 +57,15 @@
 @media (min-width:700px) and (max-width:900px) {
   .container-card {
     display: inline-block;
-    width: 60vw;
-    height: 65vh;
-    margin-top: 15vh;
+    width: 70vw;
+    height: 45vh;
+    overflow: auto;
   }
 
   .cardInfo {
     margin-top: 2vh;
     text-align: left;
     color: #00003c;
-    
   }
   
   .text-card-from-to {
