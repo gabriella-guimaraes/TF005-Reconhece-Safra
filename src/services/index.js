@@ -82,3 +82,59 @@ export const UsersData = () => {
   return firebase.firestore().collection('users').get()
   .then((queryReview) => queryReview.docs);
 };
+
+export const ForgotPassword = (email) => {
+  const auth = firebase.auth();
+  auth.sendPasswordResetEmail(email).then(function() {
+    alert('Email enviado. Por favor olhe sua caixa de emails.')
+  }).catch(() => {
+    alert('Ops, algo deu errado. Por favor tente mais tarde.')
+  });
+}
+
+export const createCard = async(userToId, recommendationType, recommendationText, attitudeSafra ) => {
+  const user = firebase.auth().currentUser;
+  
+  const date = new Date();
+
+  let userFrom = await firebase.firestore().collection('users')
+  .where('id', '==', user.uid).get().then((query) => {
+    let loggedUser = [];
+    query.forEach((userLog) => {
+      loggedUser = userLog.data();
+    })
+    return loggedUser;
+  });
+
+  let userTo = await firebase.firestore().collection('users')
+  .where('id', '==', userToId).get().then((query) => {
+    let loggedUser = [];
+    query.forEach((userLog) => {
+      loggedUser = userLog.data();
+    })
+    return loggedUser;
+  });
+  
+  console.log('logado', userFrom);
+  console.log('para', userTo);
+  console.log('recType', recommendationType);
+  console.log('recText', recommendationText);
+  console.log('recAtti', attitudeSafra);
+
+  firebase.firestore().collection('cards').add({
+    user_from: {
+      name: userFrom.name,
+      user_id: userFrom.id,
+      role: userFrom.role
+    },
+    user_to: {
+      name: userTo.name,
+      user_id: userTo.id,
+      role: userTo.role
+    },
+    attitude_Safra: attitudeSafra,
+    recommendation: recommendationType,
+    text: recommendationText,
+    createdAt: date.toLocaleString('pt-BR'),
+  })
+};
