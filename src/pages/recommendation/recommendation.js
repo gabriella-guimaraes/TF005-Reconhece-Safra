@@ -8,8 +8,8 @@ export const Recommendation = () => {
   rootElement.className = "container-div-register"
   rootElement.innerHTML += `
   <div class="recommendation-page">
-    <h1>Escreva uma recomendação!</h1>
-    <form id="recommendation-form">
+    <h1 class="intro">Escreva uma recomendação!</h1>
+    <form class="recommendation-form" id="recommendation-form">
       <label class="recommendation-page" for="userAddressee">Para:</label>
       <select id="userAddressee">
       <option> </option>
