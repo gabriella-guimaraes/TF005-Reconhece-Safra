@@ -2,7 +2,7 @@ import { Feed } from './pages/feed/feed.js';
 import { Login } from './pages/login/login.js';
 import { Register } from './pages/register/register.js';
 import { Recommendation } from './pages/recommendation/recommendation.js';
-import { Tester } from './pages/tester/tester.js';
+import { Tester } from './components/tester/tester.js';
 import { Construction } from './pages/register/construction.js';
 import { onNavigate } from './utils/history.js';
 
