@@ -4,9 +4,8 @@
     position: absolute;
     align-items: center;
     justify-content: center;
-    padding-top: 30px;
+    
 }
-
 
 .nomesCargos{
     padding: 100px;
@@ -21,7 +20,7 @@
     position: absolute;
     align-items: center;
     justify-content: center;
-    padding-top: 400px;
+    padding-top: 330px;
     border-radius: 80px;
     height: 30px;
     
