@@ -1,0 +1,16 @@
+.jss8 {
+    width: 100%;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    padding-top: 30px;
+}
+
+
+.nomesCargos{
+    padding: 100px;
+    font-family: 'Roboto Slab',-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",serif;
+    font-weight: 400;
+    color: #00003c;
+}
