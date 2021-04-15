@@ -1,4 +1,4 @@
-import { UsersData } from '../../services/index.js';
+import { UsersData, createCard } from '../../services/index.js';
 import { Navbar } from '../../components/navbar/navBar.js';
 import { Footer } from '../../components/footer/footer.js';
 
@@ -43,6 +43,21 @@ export const Recommendation = () => {
     </div>
     `
     recommendationForm.innerHTML = modalTemplate
+
+    const submitRecommendation = rootElement.querySelector('#submit-recommendation');
+
+    const userTo = rootElement.querySelector('#userAddressee');
+    const recommendationText = rootElement.querySelector('#model-recommendation');
+
+    submitRecommendation.addEventListener('click', (event) => {
+      event.preventDefault();
+      createCard(
+        userTo.options[userTo.selectedIndex].value,
+        'Inspiração no Projeto',
+        recommendationText.value,
+        {}
+      );
+    })
   })
 
   referenceBtn.addEventListener('click', (event) => {
@@ -53,27 +68,27 @@ export const Recommendation = () => {
       
       <h2>Atitudes Safra</h2>
       <div class="recommendation-page">
-        <input type="checkbox" id="specialist" name="specialist" value="specialist">
+        <input type="checkbox" id="specialist" class="checkbox" name="specialist" value="specialist" data-label="Especialista">
         <label for="specialist">Especialista</label>
       </div>
 
       <div class="recommendation-page">
-        <input type="checkbox" id="partnership" name="partnership" value="partnership">
+        <input type="checkbox" id="partnership" class="checkbox" name="partnership" value="partnership" data-label="Parceiro">
         <label for="partnership">Parceiro</label>
       </div>
 
       <div class="recommendation-page">
-        <input type="checkbox" id="resilience" name="resilience" value="resilience">
+        <input type="checkbox" id="resilience" class="checkbox" name="resilience" value="resilience" data-label="Resiliência">
         <label for="resilience">Resiliência</label>
       </div>
 
       <div class="recommendation-page">
-        <input type="checkbox" id="owner-attitude" name="owner-attitude" value="owner-attitude">
+        <input type="checkbox" id="owner-attitude" class="checkbox" name="owner-attitude" value="owner-attitude" data-label="Atitude de Dono">
         <label for="owner-attitude">Atitude de Dono</label>
       </div>
 
       <div class="recommendation-page">
-        <input type="checkbox" id="leadership" name="leadership" value="leadership">
+        <input type="checkbox" id="leadership" class="checkbox" name="leadership" value="leadership" data-label="Liderança">
         <label for="leadership">Liderança</label>
       </div>
 
@@ -84,6 +99,36 @@ export const Recommendation = () => {
     </div>
     `
     recommendationForm.innerHTML = modalTemplate
+
+    
+    let inputs = rootElement.querySelectorAll('.checkbox');
+    const selectedCheckbox = () => {
+      let formatInput = {};
+      for(let i = 0; i < inputs.length; i++) {
+        if (inputs[i].checked) {
+          console.log(inputs[i].value)
+          formatInput[inputs[i].value] = inputs[i].getAttribute('data-label');
+        }
+      }
+      
+      return formatInput;
+    };
+
+    const submitRecommendation = rootElement.querySelector('#submit-recommendation');
+
+    const userTo = rootElement.querySelector('#userAddressee');
+    const recommendationText = rootElement.querySelector('#model-recommendation');
+
+    submitRecommendation.addEventListener('click', (event) => {
+      event.preventDefault();
+      createCard(
+        userTo.options[userTo.selectedIndex].value,
+        'Atitudes Safra',
+        recommendationText.value,
+        selectedCheckbox()
+      );
+    })
+
   })
 
   differenceBtn.addEventListener('click', (event) => {
@@ -94,22 +139,22 @@ export const Recommendation = () => {
       
       <h2>Tópicos</h2>
       <div class="recommendation-page">
-        <input type="checkbox" id="feedback" name="feedback" value="feedback">
+        <input type="checkbox" class="checkbox" id="feedback" name="feedback" value="feedback" data-label="Feedback">
         <label for="feedback">Feedback</label>
       </div>
 
       <div class="recommendation-page">
-        <input type="checkbox" id="hints-tips" name="hints-tips" value="hints-tips">
+        <input type="checkbox"  class="checkbox" id="hints-tips" name="hints-tips" value="hints-tips" data-label="Dicas e Sugestões">
         <label for="hints-tips">Dicas e Sugestões</label>
       </div>
 
       <div class="recommendation-page">
-        <input type="checkbox" id="support" name="support" value="support">
+        <input type="checkbox" class="checkbox"  id="support" name="support" value="support" data-label="Apoio em Desafios">
         <label for="support">Apoio em Desafios</label>
       </div>
 
       <div class="recommendation-page">
-        <input type="checkbox" id="owner-attitude" name="owner-attitude" value="owner-attitude">
+        <input type="checkbox" class="checkbox"  id="owner-attitude" name="owner-attitude" value="owner-attitude" data-label="Atitude de Dono">
         <label for="owner-attitude">Atitude de Dono</label>
       </div>
 
@@ -120,6 +165,34 @@ export const Recommendation = () => {
     </div>
     `
     recommendationForm.innerHTML = modalTemplate
+
+    let inputs = rootElement.querySelectorAll('.checkbox');
+    const selectedCheckbox = () => {
+      let formatInput = {};
+      for(let i = 0; i < inputs.length; i++) {
+        if (inputs[i].checked) {
+          console.log(inputs[i].value)
+          formatInput[inputs[i].value] = inputs[i].getAttribute('data-label');
+        }
+      }
+      
+      return formatInput;
+    };
+
+    const submitRecommendation = rootElement.querySelector('#submit-recommendation');
+
+    const userTo = rootElement.querySelector('#userAddressee');
+    const recommendationText = rootElement.querySelector('#model-recommendation');
+
+    submitRecommendation.addEventListener('click', (event) => {
+      event.preventDefault();
+      createCard(
+        userTo.options[userTo.selectedIndex].value,
+        'Diferença no dia-a-dia',
+        recommendationText.value,
+        selectedCheckbox()
+      );
+    })
   })
   function loadUsers() {
     UsersData()
@@ -127,7 +200,7 @@ export const Recommendation = () => {
         doc.forEach((user) => {
           const userAddressee = rootElement.querySelector('#userAddressee');
           let option = document.createElement('option');
-          option.value = user.data().name;
+          option.value = user.data().id;
           option.text = user.data().name;
           userAddressee.add(option);
         })
