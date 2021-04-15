@@ -29,17 +29,17 @@ fieldset {
 
 .register input, .registerLogin input {
   padding: 7px;
-  width: 100%;
-  height: 10%;
+  width: 106%;
+  height: 22%;
   border-radius: 5px;
-  margin-left: 20px;
+  margin-left: 25px;
   margin-top: 10px;
 }
 
 .select {
   width: 106%;
   height: 22%;
-  margin-left: 22px;
+  margin-left: 25px;
   margin-top: 10px;
   margin-bottom: 10%;
 }
@@ -51,7 +51,7 @@ fieldset {
   font-size: 17px;
   border-radius: 7px;
   margin-top: 10px;
-  margin-left: 22px;
+  margin-left: 25px;
   background-color: #1E2044;
   border-color: white;
   color: #ffffff;
@@ -71,12 +71,13 @@ fieldset {
     height: 430px;
   }
   .register input, .registerLogin input {
-    width: 95%;
-    height: 25px;
+    width: 98%;
+    height: 20%;
     margin-left: 55px;
   }
   .select {
-    width: 99%;
+    width: 98%;
+    height: 20%;
     margin-left: 55px;
   }
   .btn {
@@ -104,17 +105,19 @@ fieldset {
     font-size: 20px;
   }
   .register input, .registerLogin input {
+    width: 103%;
     margin-left: 50px;
   }
   .select {
     width: 103%;
-    height: 38px;
+    height: 22%;
     margin-left: 50px;
   }
   .btn {
     width: 103%;
     height: 48px;
     margin-left: 50px;
+    margin-top: -10px;
     font-size: 20px;
   }
   .items {
