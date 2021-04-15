@@ -10,9 +10,9 @@ export const Recommendation = () => {
   <div class="recommendation-page">
     <h1 class="intro">Escreva uma recomendação!</h1>
     <form class="recommendation-form" id="recommendation-form">
-      <label class="recommendation-page" for="userAddressee">Para:</label>
+      <label class="recommendation-page" for="userAddressee"></label>
       <select class="userSelect" id="userAddressee">
-      <option> </option>
+      <option> Para: </option>
       </select>
 
       <button class="recommendation-page" id="inspirationBtn">Inspiração do projeto</button>
@@ -37,9 +37,12 @@ export const Recommendation = () => {
     event.preventDefault();
     const modalTemplate = `
     <div class="recommendation-page">
-      <p>Para quem inspirou em uma ação ou projeto específico</p>
-      <label class="recommendation-page" for="model-recommendation" >Escreva sua mensagem aqui:</label>
-      <input class="recommendation-page" id="model-recommendation" maxLength="500">
+      <div class="text">
+      <div class="text-div">
+      <p>Para quem inspirou em uma ação ou projeto específico.</p>
+      <input class="recommendation-page" id="model-recommendation" maxLength="500" placeholder="Escreva sua mensagem aqui!">
+      </div>
+      </div>
       <button class="recommendation-page" id="submit-recommendation">Enviar</button>
     </div>
     `
@@ -65,9 +68,11 @@ export const Recommendation = () => {
     event.preventDefault();
     const modalTemplate = `
     <div class="recommendation-page">
+    <div class="text-div">
+    <div class="text">
       <p>Para quem se destaca em alguma atitude.</p>
-      
-      <h2>Atitudes Safra</h2>
+      </div>
+      <h2 class="h2">Atitudes Safra</h2>
       <div class="recommendation-page">
         <input type="checkbox" id="specialist" class="checkbox" name="specialist" value="specialist" data-label="Especialista">
         <label for="specialist">Especialista</label>
@@ -93,25 +98,24 @@ export const Recommendation = () => {
         <label for="leadership">Liderança</label>
       </div>
 
-      <label class="recommendation-page" for="model-recommendation" >Escreva sua mensagem aqui:</label>
-      <input class="recommendation-page" id="model-recommendation" maxLength="500">
-
+      <input class="recommendation-page" id="model-recommendation" maxLength="500" placeholder="Escreva sua mensagem aqui!">
+      </div>
       <button class="recommendation-page" id="submit-recommendation">Enviar</button>
     </div>
     `
     recommendationForm.innerHTML = modalTemplate
 
-    
+
     let inputs = rootElement.querySelectorAll('.checkbox');
     const selectedCheckbox = () => {
       let formatInput = {};
-      for(let i = 0; i < inputs.length; i++) {
+      for (let i = 0; i < inputs.length; i++) {
         if (inputs[i].checked) {
           console.log(inputs[i].value)
           formatInput[inputs[i].value] = inputs[i].getAttribute('data-label');
         }
       }
-      
+
       return formatInput;
     };
 
@@ -136,8 +140,10 @@ export const Recommendation = () => {
     event.preventDefault();
     const modalTemplate = `
     <div class="recommendation-page">
+    <div class="text-div">
+    <div class="text">
       <p>Para quem ajuda as pessoas e os times a se desenvolverem: com feedbacks, dicas, orientações.</p>
-      
+      </div>
       <h2>Tópicos</h2>
       <div class="recommendation-page">
         <input type="checkbox" class="checkbox" id="feedback" name="feedback" value="feedback" data-label="Feedback">
@@ -159,9 +165,8 @@ export const Recommendation = () => {
         <label for="owner-attitude">Atitude de Dono</label>
       </div>
 
-      <label class="recommendation-page" for="model-recommendation" >Escreva sua mensagem aqui:</label>
-      <input class="recommendation-page" id="model-recommendation" maxLength="500">
-
+      <input class="recommendation-page" id="model-recommendation" maxLength="500" placeholder="Escreva sua mensagem aqui!">
+      </div>
       <button class="recommendation-page" id="submit-recommendation">Enviar</button>
     </div>
     `
@@ -170,13 +175,13 @@ export const Recommendation = () => {
     let inputs = rootElement.querySelectorAll('.checkbox');
     const selectedCheckbox = () => {
       let formatInput = {};
-      for(let i = 0; i < inputs.length; i++) {
+      for (let i = 0; i < inputs.length; i++) {
         if (inputs[i].checked) {
           console.log(inputs[i].value)
           formatInput[inputs[i].value] = inputs[i].getAttribute('data-label');
         }
       }
-      
+
       return formatInput;
     };
 
@@ -206,9 +211,9 @@ export const Recommendation = () => {
           userAddressee.add(option);
         })
       });
- 
+
   }
   loadUsers();
-  
+
   return rootElement;
 };

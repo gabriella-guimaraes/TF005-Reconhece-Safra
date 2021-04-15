@@ -18,5 +18,17 @@
 .logoNav {
     flex-grow: 1;
     max-width: 110px;
-    margin-right: 80%;
+    margin-right: 70%;
+}
+
+@media (min-width:700px) and (max-width:900px) {
+    .logoNav {
+        margin-right: 82%;
+    }
+}
+
+@media (min-width:1500px) {
+    .logoNav {
+        margin-right: 92%;
+    }
 }
