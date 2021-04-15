@@ -1,3 +1,4 @@
+
 export const Tester = () => {
   const rootElement = document.createElement('div');
   rootElement.innerHTML = `
@@ -13,7 +14,9 @@ export const Tester = () => {
   </div>
   </div>
   <div class="badges"> 
+  
   <img class="jss9" src="components/tester/imgBadges/badges.png" style="border-radius: 80px" alt="logo">
+ 
   <img class="jss9" src="components/tester/imgBadges/badges(5).png" style="border-radius: 80px" alt="logo">
   <img class="jss9" src="components/tester/imgBadges/badges(10).png" style="border-radius: 80px" alt="logo">
   <img class="jss9" src="components/tester/imgBadges/badges(13).png" style="border-radius: 80px" alt="logo">
