@@ -1,7 +1,11 @@
 import { UsersData } from '../../services/index.js';
+import { Navbar } from '../../components/navbar/navBar.js';
+import { Footer } from '../../components/footer/footer.js';
+
 export const Recommendation = () => {
   // Coloque sua página
   const rootElement = document.createElement('div');
+  rootElement.appendChild(Navbar());
   rootElement.className = "container-div-register"
   rootElement.innerHTML = `
   <div class="recommendation-page">
@@ -18,6 +22,8 @@ export const Recommendation = () => {
     </form>
   </div>
   `;
+
+  rootElement.appendChild(Footer());
 
   // const userAddressee = rootElement.querySelector('#userAddressee');
   const inspirationBtn = rootElement.querySelector('#inspirationBtn');
