@@ -13,7 +13,7 @@ export const Login = () => {
         <input type="password" class="password" id="password" placeholder="Insira sua senha">
       <button id="submit" class="btnLogin">Entrar</button>
       <div class="buttonLogin">
-      <p>Não tem conta?<button class="registerBtn" id="btnCadastro">Cadastre-se</button></p>
+      <p>Não tem conta?<button class="registerBtn" id="btnCadastro">Cadastre-se.</button></p>
       </div>
       <div class="recoverPassword"
       <p>Esqueceu sua senha?<button class="recoverBtn" id="forgot-password">Clique aqui!</button></p>
