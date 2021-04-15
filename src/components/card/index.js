@@ -5,10 +5,12 @@ export const Card = (card) => {
   <div class="img-user">
     <img src="https://thispersondoesnotexist.com/image" style="width:60px">
   </div>      
-  <div class="cardInfo"> 
+  <div class="cardInfo">
+    <h2>${card.recommendation}</</h2> 
     <p class="texto-card"> De: ${card.user_from.name}</p>
-    <p class="texto-card"> Para: </p>
-    <p class="texto-card"> Mensagem: </p> 
+    <p class="texto-card"> Para: ${card.user_to.name}</p>
+    <p class="texto-card"> Mensagem: ${card.text}</</p>
+    <p class="texto-card"> Criado em: ${card.createdAt}</</p> 
   </div>
   </div>
   `;
