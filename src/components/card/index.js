@@ -7,7 +7,7 @@ export const Card = (card) => {
       <h2> Recomendado por: ${card.recommendation}</</h2>
     </div>
     <div class="img-user">
-      <img class="img-user-logged" src="https://thispersondoesnotexist.com/image" style="width:60px">
+      <img class="img-user-logged" src="https://thispersondoesnotexist.com/image" />
     </div>      
     <div class="cardInfo"> 
       <p class="texto-card"> De: ${card.user_from.name}</p>
