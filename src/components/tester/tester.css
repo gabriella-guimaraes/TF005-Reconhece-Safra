@@ -1,26 +1,28 @@
 .jss8 {
     width: 100%;
+    margin-left: 3vh;
     display: flex;
     position: absolute;
     align-items: center;
+    margin-top: 30px;
     justify-content: center;
-    
 }
 
 .nomesCargos{
-    padding: 50px;
-    font-family: 'Roboto Slab',-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",serif;
-    font-weight: 300;
-    color: #00003c;
+  padding: 40px;
+  font-family: 'Roboto Slab',-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",serif;
+  font-weight: 300;
+  color: #00003c;
 }
 
 .badges {
     width: 100%;
     display: flex;
+    margin-left: 110px;
     position: absolute;
     align-items: center;
     justify-content: center;
-    padding-top: 290px;
+    padding-top: 309px;
     border-radius: 80px;
     height: 30px;
 }
